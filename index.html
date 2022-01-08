@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenlock</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            
+        }
+        .img{flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            margin-top: 200px;
+            
+
+        }
+        .img2{display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+          
+
+        }
+        input {
+    background: #E4E4E4;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #555555;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+textarea {
+    background: #E4E4E4;
+    max-width: calc(100% - 52px);
+    width: 100%;
+    padding: 18px 22px;
+    font-size: 1em;
+    color: #555555;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+.class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+}
+button{
+    background: #E4E4E4;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #555555;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+        
+    </style>
+</head>
+<body>
+    
+      <div class="class">
+        <input type="text" id="key" maxlength="4" minlength="4" pattern="[0-9]"><br>
+        <button onclick="submit()">submit</button>
+    </div>
+    
+    <div  class="container">
+        
+        <input id="input" type="text" maxlength="4" minlength="4"  pattern="[0-9]" >
+        <div class="buttons">
+            <button  onclick="number('1')">1</button>
+            <button  onclick="number('2')">2</button>
+            <button  onclick="number('3')" >3</button><br>
+            <button  onclick="number('4')">4</button>
+            <button  onclick="number('5')">5</button>
+            <button  onclick="number('6')">6</button><br>
+            <button  onclick="number('7')">7</button>
+            <button  onclick="number('8')">8</button>
+            <button  onclick="number('9')">9</button><br>
+            <button  onclick="number('*')">*</button>
+            <button  onclick="number('0')">0</button>
+            <button  onclick="number('#')">#</button><br>
+            <button  onclick="unlock()">unlock</button>
+            <div class="img">
+                <h1>Screen is unlockedd</h1>
+                <img style="height: 300px; width: 450px;" src="https://parade.com/wp-content/uploads/2020/01/stay-positive-quotes.jpg" alt="">
+            </div>
+            <div class="img2">
+                <h1>Enter the correct pin</h1>
+            </div>
+           
+    
+    <script>
+   
+        var container = document.querySelector('.container');
+        var img =document.querySelector(".img");
+        var img2 =  document.querySelector(".img2");
+        var img3 =  document.querySelector(".img3");
+     
+        
+       
+        function number(D){
+            input.value=input.value+D;
+            
+        }
+        function unlock(){
+            
+           
+           
+             if (input.value === key.value)
+             {
+                img.style.display="flex";
+               
+             }
+         
+             else{
+                img2.style.display="flex";
+             }
+             
+            }
+        
+    </script>
+    
+</body>
+</html>
